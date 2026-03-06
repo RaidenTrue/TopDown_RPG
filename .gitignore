@@ -2,6 +2,7 @@
 Binaries/
 Intermediate/
 Saved/
+Build/
 
 # Ignore Visual Studio files
 *.sln
