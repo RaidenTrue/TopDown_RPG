@@ -1,0 +1,18 @@
+# Ignore Binaries and Intermediate folders
+Binaries/
+Intermediate/
+Saved/
+
+# Ignore Visual Studio files
+*.sln
+*.vcxproj*
+*.user
+*.opensdf
+*.sdf
+*.ipch
+*.pdb
+*.idb
+*.vs
+
+# Unreal Engine Cache
+*DerivedDataCache/
