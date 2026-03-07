@@ -7,6 +7,9 @@
 #include "RPGPlayerController.generated.h"
 
 class UInputMappingContext;
+class UInputAction;
+
+struct FInputActionValue;
 
 /**
  * 
@@ -23,11 +26,16 @@ public:
 protected:
 
 	virtual void BeginPlay() override;
-
+	virtual void SetupInputComponent() override;
 
 private:
 
+	void Move(const FInputActionValue& InputActionValue);
+
 	UPROPERTY(EditAnywhere, Category = "Input")
 	TObjectPtr<UInputMappingContext> RpgCharacterContext;
+
+	UPROPERTY(EditAnywhere, Category = "Input")
+	TObjectPtr<UInputAction> MoveAction;
 	
 };
