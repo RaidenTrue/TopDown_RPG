@@ -3,3 +3,12 @@
 
 #include "Character/RPGEnemyCharacter.h"
 
+void ARPGEnemyCharacter::HighlightActor()
+{
+
+}
+
+void ARPGEnemyCharacter::UnHighlightActor()
+{
+
+}
