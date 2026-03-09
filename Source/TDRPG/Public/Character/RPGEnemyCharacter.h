@@ -17,6 +17,8 @@ class TDRPG_API ARPGEnemyCharacter : public ARPGCharacterBase, public IEnemyInte
 	
 public:
 
+	ARPGEnemyCharacter();
+
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
 };
