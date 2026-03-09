@@ -15,6 +15,5 @@ ARPGCharacterBase::ARPGCharacterBase()
 void ARPGCharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
-	
 }
 
