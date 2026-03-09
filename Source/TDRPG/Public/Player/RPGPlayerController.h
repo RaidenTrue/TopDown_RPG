@@ -8,6 +8,7 @@
 
 class UInputMappingContext;
 class UInputAction;
+class IEnemyInterface;
 
 struct FInputActionValue;
 
@@ -23,6 +24,8 @@ public:
 
 	ARPGPlayerController();
 
+	virtual void PlayerTick(float DeltaTime) override;
+
 protected:
 
 	virtual void BeginPlay() override;
@@ -32,6 +35,10 @@ private:
 
 	void Move(const FInputActionValue& InputActionValue);
 
+	void CursorTrace();
+	TScriptInterface<IEnemyInterface> LastActor;
+	TScriptInterface<IEnemyInterface> ThisActor;
+ 
 	UPROPERTY(EditAnywhere, Category = "Input")
 	TObjectPtr<UInputMappingContext> RpgCharacterContext;
 
