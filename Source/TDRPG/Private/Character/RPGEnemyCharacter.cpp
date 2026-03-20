@@ -12,6 +12,7 @@ ARPGEnemyCharacter::ARPGEnemyCharacter()
 
 	AbilitySystemComponent = CreateDefaultSubobject<URPGAbilitySystemComponent>("AbilitySystemComponent");
 	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
 
 	AttributeSet = CreateDefaultSubobject<URPGAttributeSet>("AttributeSet");
 	
