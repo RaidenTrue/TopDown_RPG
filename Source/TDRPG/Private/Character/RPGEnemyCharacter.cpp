@@ -32,3 +32,11 @@ void ARPGEnemyCharacter::UnHighlightActor()
 	GetMesh()->SetRenderCustomDepth(false);
 	Weapon->SetRenderCustomDepth(false);
 }
+
+void ARPGEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	/*check(AbilitySystemComponent);*/
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
+}
