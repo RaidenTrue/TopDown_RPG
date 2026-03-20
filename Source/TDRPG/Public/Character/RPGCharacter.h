@@ -33,5 +33,7 @@ protected:
 	UCameraComponent* Camera;
 
 private:
+
+	void InitAbilityActorInfo();
 	
 };
