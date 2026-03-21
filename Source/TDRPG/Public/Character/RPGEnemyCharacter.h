@@ -19,6 +19,12 @@ public:
 
 	ARPGEnemyCharacter();
 
+	/** Start Enemy Interace **/
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+	/** End Enemy Interface **/
+
+protected:
+
+	virtual void BeginPlay() override;
 };

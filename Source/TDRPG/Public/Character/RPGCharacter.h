@@ -21,6 +21,8 @@ public:
 
 	ARPGCharacter();
 
+	virtual void PossessedBy(AController* NewController) override;
+	virtual void OnRep_PlayerState() override;
 
 protected:
 
@@ -31,5 +33,7 @@ protected:
 	UCameraComponent* Camera;
 
 private:
+
+	void InitAbilityActorInfo();
 	
 };

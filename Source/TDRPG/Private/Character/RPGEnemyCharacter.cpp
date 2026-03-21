@@ -2,11 +2,20 @@
 
 
 #include "Character/RPGEnemyCharacter.h"
+#include "AbilitySystem/RPGAbilitySystemComponent.h"
+#include "AbilitySystem/RPGAttributeSet.h"
 #include "TDRPG/TDRPG.h"
 
 ARPGEnemyCharacter::ARPGEnemyCharacter()
 {
 	GetMesh()->SetCollisionResponseToChannel(ECC_Visibility, ECR_Block);
+
+	AbilitySystemComponent = CreateDefaultSubobject<URPGAbilitySystemComponent>("AbilitySystemComponent");
+	AbilitySystemComponent->SetIsReplicated(true);
+	AbilitySystemComponent->SetReplicationMode(EGameplayEffectReplicationMode::Minimal);
+
+	AttributeSet = CreateDefaultSubobject<URPGAttributeSet>("AttributeSet");
+	
 }
 
 void ARPGEnemyCharacter::HighlightActor()
@@ -22,4 +31,12 @@ void ARPGEnemyCharacter::UnHighlightActor()
 {
 	GetMesh()->SetRenderCustomDepth(false);
 	Weapon->SetRenderCustomDepth(false);
+}
+
+void ARPGEnemyCharacter::BeginPlay()
+{
+	Super::BeginPlay();
+
+	/*check(AbilitySystemComponent);*/
+	AbilitySystemComponent->InitAbilityActorInfo(this, this);
 }
