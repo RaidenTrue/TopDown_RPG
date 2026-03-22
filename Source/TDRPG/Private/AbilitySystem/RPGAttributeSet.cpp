@@ -7,6 +7,9 @@
 URPGAttributeSet::URPGAttributeSet()
 {
 	InitHealth(100.f);
+	InitMaxHealth(150.f);
+	InitMana(50.f);
+	InitMaxMana(75.f);
 }
 
 void URPGAttributeSet::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const

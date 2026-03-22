@@ -34,12 +34,15 @@ public:
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_MaxHealth, Category = "Character")
 	FGameplayAttributeData MaxHealth;
+	ATTRIBUTE_ACCESSORS(URPGAttributeSet, MaxHealth);
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_Mana, Category = "Character")
 	FGameplayAttributeData Mana;
+	ATTRIBUTE_ACCESSORS(URPGAttributeSet, Mana);
 
 	UPROPERTY(BlueprintReadOnly, ReplicatedUsing = OnRep_MaxMana, Category = "Character")
 	FGameplayAttributeData MaxMana;
+	ATTRIBUTE_ACCESSORS(URPGAttributeSet, MaxMana);
 
 	UFUNCTION()
 	void OnRep_Health(const FGameplayAttributeData& OldHealth) const;
